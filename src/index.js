@@ -6,12 +6,16 @@ import './sass/main.scss';
 // то кол - во миллисекунд, которое передали во время вызова функции delay.
 
 const delay = ms => {
-    return new Promise(resolve => {
-        setTimeout(() => resolve(ms))
-    })
+  // Твой код
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(ms)
+    }, ms)
+  })
 };
 
 const logger1 = time => console.log(`Resolved after ${time}ms`);
+
 
 // Вызовы функции для проверки
 delay(2000).then(logger1); // Resolved after 2000ms
